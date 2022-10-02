@@ -1,4 +1,4 @@
-import 'dart:ui';
+//Ishoe Detail page
 
 import 'package:e_commerce/utils/dimensions.dart';
 import 'package:e_commerce/widget/bigtext.dart';
@@ -14,8 +14,10 @@ class TopItems extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.white,
+      //Beginning of Stack
       body: Stack(
         children: [
+          //Background Image
           Positioned(
             left: 0,
             right: 0,
@@ -30,6 +32,7 @@ class TopItems extends StatelessWidget {
               ),
             ),
           ),
+          //Positioning of Icons
           Positioned(
             top: Dimension.height45,
             left: Dimension.height20,
@@ -42,6 +45,7 @@ class TopItems extends StatelessWidget {
               ],
             ),
           ),
+          //Details
           Positioned(
             left: 0,
             right: 0,
@@ -63,7 +67,9 @@ class TopItems extends StatelessWidget {
                   const Shoe_Columns(text: 'Unpaired Maroon Plimsoll'),
                   Padding(
                     padding: EdgeInsets.only(
-                        top: Dimension.height20, bottom: Dimension.height20),
+                      top: Dimension.height20,
+                      bottom: Dimension.height20,
+                    ),
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
@@ -121,45 +127,44 @@ class TopItems extends StatelessWidget {
           ),
         ],
       ),
-      bottomNavigationBar: Container(
-        height: 100,
+      //Bottom Navigation Bar
+      bottomNavigationBar: Padding(
         padding: EdgeInsets.only(
-          top: 30,
-          bottom: 30,
-        ),
-        decoration: const BoxDecoration(
-          borderRadius: BorderRadius.only(
-            topLeft: Radius.circular(20),
-            topRight: Radius.circular(20),
-          ),
-          color: Colors.amber,
-        ),
+            left: Dimension.width15,
+            right: Dimension.width15,
+            bottom: Dimension.height15),
         child: Container(
+          height: Dimension.height45,
+          width: MediaQuery.of(context).size.width,
+          decoration: BoxDecoration(color: Colors.white),
           child: Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               Container(
-                padding: EdgeInsets.only(
-                    top: Dimension.height20,
-                    bottom: Dimension.height20,
-                    left: Dimension.width20,
-                    right: Dimension.width20),
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(Dimension.radius20),
-                  color: Colors.white,
-                ),
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.start,
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    const Icon(Icons.remove, color: Colors.grey),
-                    BigText(text: '0'),
-                    const Icon(
-                      Icons.add,
-                      color: Colors.grey,
-                    )
-                  ],
+                width: Dimension.width30,
+                child: Icon(
+                  Icons.favorite_outline,
+                  color: Colors.black,
+                  size: Dimension.height30,
                 ),
               ),
+              SizedBox(
+                width: Dimension.width10,
+              ),
+              Expanded(
+                child: Container(
+                  height: Dimension.height38,
+                  decoration: const BoxDecoration(color: Colors.black),
+                  child: OutlinedButton(
+                    onPressed: () {},
+                    child: Text(
+                      'ADD TO CART',
+                      style: TextStyle(
+                          color: Colors.white, fontSize: Dimension.height15),
+                    ),
+                  ),
+                ),
+              )
             ],
           ),
         ),

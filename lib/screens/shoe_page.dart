@@ -1,4 +1,4 @@
-import 'dart:ui';
+//
 import 'package:dots_indicator/dots_indicator.dart';
 import 'package:e_commerce/utils/dimensions.dart';
 import 'package:e_commerce/widget/bigtext.dart';

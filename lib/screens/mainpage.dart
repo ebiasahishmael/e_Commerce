@@ -1,3 +1,5 @@
+//Main Shoe Page
+
 import 'package:e_commerce/screens/shoe_page.dart';
 import 'package:e_commerce/utils/dimensions.dart';
 import 'package:e_commerce/widget/bigtext.dart';
@@ -29,34 +31,20 @@ class _MainAppPageState extends State<MainAppPage> {
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Column(
-                    children: [
-                      BigText(
-                        text: "Ghana",
-                        color: Colors.teal,
-                      ),
-                      Row(
-                        children: [
-                          SmallText(
-                            text: 'Cape Coast',
-                            color: Colors.black,
-                          ),
-                          const Icon(Icons.arrow_drop_down)
-                        ],
-                      )
-                    ],
+                  Icon(
+                    Icons.mail_outline,
+                    color: Colors.teal,
+                    size: Dimension.iconSize24,
+                  ),
+                  BigText(
+                    text: 'ISHOE',
+                    color: Colors.teal,
                   ),
                   Center(
                     child: Container(
-                      width: Dimension.width45,
-                      height: Dimension.height45,
-                      decoration: BoxDecoration(
-                          borderRadius:
-                              BorderRadius.circular(Dimension.radius15),
-                          color: Colors.teal),
                       child: Icon(
                         Icons.search,
-                        color: Colors.white,
+                        color: Colors.teal,
                         size: Dimension.iconSize24,
                       ),
                     ),
