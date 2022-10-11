@@ -1,9 +1,13 @@
 import 'package:e_commerce/screens/mainpage.dart';
+import 'package:e_commerce/screens/shoes_info/recomemded_shoe_details.dart';
 import 'package:e_commerce/screens/shoes_info/top_items.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:e_commerce/helper/dependencies.dart' as dep;
 
-void main() {
+Future<void> main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await dep.init();
   runApp(const MyApp());
 }
 
@@ -28,8 +32,9 @@ class MyApp extends StatelessWidget {
         // is not restarted.
         primarySwatch: Colors.blue,
       ),
-      home: TopItems(),
-      //const MainAppPage(),
+      home: //RecomemdedShoeDetails()
+          //TopItems(),
+          const MainAppPage(),
     );
   }
 }

@@ -2,7 +2,9 @@
 
 import 'package:e_commerce/utils/dimensions.dart';
 import 'package:e_commerce/widget/bigtext.dart';
+import 'package:e_commerce/widget/doable_Detailed_Text.dart';
 import 'package:e_commerce/widget/shoeColumn.dart';
+import 'package:e_commerce/widget/shoeHeader.dart';
 import 'package:e_commerce/widget/smalltext.dart';
 import 'package:e_commerce/widget/top_item_icon.dart';
 import 'package:flutter/material.dart';
@@ -61,67 +63,36 @@ class TopItems extends StatelessWidget {
                       topLeft: Radius.circular(Dimension.height30),
                       topRight: Radius.circular(Dimension.height30)),
                   color: Colors.white),
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  const Shoe_Columns(text: 'Unpaired Maroon Plimsoll'),
-                  Padding(
-                    padding: EdgeInsets.only(
-                      top: Dimension.height20,
-                      bottom: Dimension.height20,
-                    ),
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        BigText(
-                            text: 'Product Details',
-                            size: Dimension.fontSize18),
-                        Padding(
-                          padding: EdgeInsets.only(top: Dimension.height20),
-                          child: BigText(
-                            text: 'Sole Material',
-                            size: Dimension.fontSize12,
-                          ),
+              child: Expanded(
+                child: SingleChildScrollView(
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      const DetailsHeader(text: "Unpaired Maroon Plimsoll"),
+                      const Shoe_Columns(),
+                      Padding(
+                        padding: EdgeInsets.only(
+                          top: Dimension.height20,
+                          bottom: Dimension.height20,
                         ),
-                        Padding(
-                          padding: EdgeInsets.only(top: Dimension.height_10),
-                          child: SmallText(
-                            text:
-                                'Rubber, wear-resistant an non-slip outer sole, increases flexibility and stability, makes you free and train.',
-                          ),
+                        child: const DoableDetailedText(
+                          productText: 'Product Details',
+                          soleMaterial: "Sole Material",
+                          soletText:
+                              "Rubber, wear-resistant an non-slip outer sole, increases flexibility and stability, makes you free and train.",
+                          outerMaterial: "Outer Material",
+                          outerText:
+                              'Synthetic, lightweight woven outer material, breathable and soft mesh keeps feet dry and comfortable.',
+                          innerMaterial: "Inner Material",
+                          innerText:
+                              'Textile, the padded insole and the breathable inner lining offer exceptional support and optimise the unique properties of each individual handle.',
+                          country: "Country",
+                          countryText: "Italy",
                         ),
-                        Padding(
-                          padding: EdgeInsets.only(top: Dimension.height_10),
-                          child: BigText(
-                            text: 'Outer Material',
-                            size: Dimension.fontSize12,
-                          ),
-                        ),
-                        Padding(
-                          padding: EdgeInsets.only(top: Dimension.height_10),
-                          child: SmallText(
-                            text:
-                                'Synthetic, lightweight woven outer material, breathable and soft mesh keeps feet dry and comfortable.',
-                          ),
-                        ),
-                        Padding(
-                          padding: EdgeInsets.only(top: Dimension.height_10),
-                          child: BigText(
-                            text: 'Inner Materia',
-                            size: Dimension.fontSize12,
-                          ),
-                        ),
-                        Padding(
-                          padding: EdgeInsets.only(top: Dimension.height_10),
-                          child: SmallText(
-                            text:
-                                'Textile, the padded insole and the breathable inner lining offer exceptional support and optimise the unique properties of each individual handle.',
-                          ),
-                        ),
-                      ],
-                    ),
-                  )
-                ],
+                      ),
+                    ],
+                  ),
+                ),
               ),
             ),
           ),
@@ -136,7 +107,7 @@ class TopItems extends StatelessWidget {
         child: Container(
           height: Dimension.height45,
           width: MediaQuery.of(context).size.width,
-          decoration: BoxDecoration(color: Colors.white),
+          decoration: const BoxDecoration(color: Colors.white),
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [

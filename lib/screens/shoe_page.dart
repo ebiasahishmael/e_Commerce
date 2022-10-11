@@ -115,7 +115,7 @@ class _ShoePageState extends State<ShoePage> {
                         color: Colors.white38,
                         image: const DecorationImage(
                           fit: BoxFit.cover,
-                          image: AssetImage('assets/images/5.png'),
+                          image: AssetImage('assets/images/6.png'),
                         ),
                       ),
                     ),
@@ -134,8 +134,7 @@ class _ShoePageState extends State<ShoePage> {
                               top: Dimension.height_10,
                               left: Dimension.width10,
                               right: Dimension.width10),
-                          child: const Shoe_Columns(
-                              text: 'Unpaired Maroon Plimsoll'),
+                          child: const Shoe_Columns(),
                         ),
                       ),
                     ),
@@ -221,7 +220,7 @@ class _ShoePageState extends State<ShoePage> {
           Align(
             alignment: Alignment.bottomCenter,
             child: Container(
-              height: Dimension.pageViewTextContainer,
+              height: Dimension.height100,
               margin: EdgeInsets.only(
                   left: Dimension.width30,
                   right: Dimension.width30,
@@ -289,29 +288,29 @@ class _ShoePageState extends State<ShoePage> {
                       SizedBox(
                         height: Dimension.height_13,
                       ),
-                      Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        children: const [
-                          IconText(
-                            icon: Icons.circle,
-                            text: 'Normal',
-                            color: Color(0xFFccc7c5),
-                            iconColor: Colors.brown,
-                          ),
-                          IconText(
-                            icon: Icons.location_on,
-                            text: '1.7km',
-                            color: Color(0xFFccc7c5),
-                            iconColor: Colors.red,
-                          ),
-                          IconText(
-                            icon: Icons.access_time_filled_rounded,
-                            text: '32min',
-                            color: Color(0xFFccc7c5),
-                            iconColor: Colors.teal,
-                          )
-                        ],
-                      )
+                      // Row(
+                      //   mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      //   children: const [
+                      //     IconText(
+                      //       icon: Icons.circle,
+                      //       text: 'Normal',
+                      //       color: Color(0xFFccc7c5),
+                      //       iconColor: Colors.brown,
+                      //     ),
+                      //     IconText(
+                      //       icon: Icons.location_on,
+                      //       text: '1.7km',
+                      //       color: Color(0xFFccc7c5),
+                      //       iconColor: Colors.red,
+                      //     ),
+                      //     IconText(
+                      //       icon: Icons.access_time_filled_rounded,
+                      //       text: '32min',
+                      //       color: Color(0xFFccc7c5),
+                      //       iconColor: Colors.teal,
+                      //     )
+                      //   ],
+                      // ),
                     ],
                   ),
                 ),

@@ -31,6 +31,7 @@ class Dimension {
 
   //Dynamic FontSize
   static double fontSize20 = screenHeight / 40.66;
+  static double fontSize16 = screenHeight / 50.82;
   static double fontSize12 = screenHeight / 67.78;
   static double fontSize26 = screenHeight / 31.27;
   static double fontSize18 = screenHeight / 45.17;

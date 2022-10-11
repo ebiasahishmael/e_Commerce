@@ -6,8 +6,7 @@ import 'package:e_commerce/widget/smalltext.dart';
 import 'package:flutter/material.dart';
 
 class Shoe_Columns extends StatelessWidget {
-  final String text;
-  const Shoe_Columns({super.key, required this.text});
+  const Shoe_Columns({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -15,9 +14,6 @@ class Shoe_Columns extends StatelessWidget {
       mainAxisAlignment: MainAxisAlignment.start,
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        BigText(
-          text: text,
-        ),
         Padding(
           padding: EdgeInsets.only(
               top: Dimension.height_10, bottom: Dimension.height_10),
